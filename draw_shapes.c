@@ -26,3 +26,18 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+//prints an arrow
+void print_arrow(int leftCol, int size)
+{
+  print_triangle(leftCol, size);
+  int center = size + leftCol;
+  for (int row = 0; row < size; row++){
+    for (int pointer = 0; pointer <= center; pointer++){
+      if(pointer == center)
+	putchar('*');
+      else
+	putchar(' ');
+    }
+    putchar('\n');
+  }
+}
